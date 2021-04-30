@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/edit_text_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:orientation="horizontal">
+        <TextView
+            android:maxLines="1"
+            android:layout_marginLeft="8dp"
+            android:paddingVertical="4dp"
+            android:id="@+id/commitDateTV"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_marginRight="1dp"
+            android:maxLines="1"
+            android:background="@color/commit_bg"
+            android:paddingVertical="4dp"
+            android:layout_gravity="center"
+            android:id="@+id/commitShaTV"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:paddingHorizontal="8dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/commitMessageTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="12dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardCornerRadius="250dp"
+            app:cardBackgroundColor="@color/black">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                app:cardCornerRadius="250dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/commitAvatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:id="@+id/committerName"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</LinearLayout>
