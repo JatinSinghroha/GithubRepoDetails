@@ -107,10 +107,8 @@ private lateinit var repoDatabase: RepoDatabase
     }
 
     private fun initRepos() {
-        if(repoDatabase.repoDao().count()!=0){
             sharedViewModel.listOfRepos.value = repoDatabase.repoDao().getAll() as List<Repo>
             repos_adapter.notifyDataSetChanged()
-        }
     }
 
     companion object {
